@@ -1,0 +1,41 @@
+{
+    "name": "gatepay-sdk",
+    "version": "1.0.0",
+    "description": "Official TypeScript/JavaScript SDK for the Gatepay API with enhanced convenience methods",
+    "author": "stack3-dev",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/stack3-dev/gatepay-sdk.git"
+    },
+    "main": "./dist/index.js",
+    "typings": "./dist/index.d.ts",
+    "keywords": [
+        "gatepay",
+        "api",
+        "sdk",
+        "typescript",
+        "javascript",
+        "payments",
+        "crypto"
+    ],
+    "files": [
+        "dist/**/*",
+        "README.md",
+        "package.json"
+    ],
+    "scripts": {
+        "generate:dev": "openapi-generator-cli generate -i http://localhost:8787/openapi -g typescript-fetch -o ./ --additional-properties=fileNaming=kebab-case,npmName=gatepay-sdk,npmVersion=1.0.0",
+        "generate:prod": "openapi-generator-cli generate -i https://api.gatepay.cloud/openapi -g typescript-fetch -o ./ --additional-properties=fileNaming=kebab-case,npmName=gatepay-sdk,npmVersion=1.0.0",
+        "build": "tsc",
+        "prepare": "npm run build",
+        "dev": "tsc --watch",
+        "clean": "rm -rf dist"
+    },
+    "devDependencies": {
+        "typescript": "^4.0 || ^5.0"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "license": "MIT"
+}
