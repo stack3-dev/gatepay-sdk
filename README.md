@@ -38,7 +38,7 @@ npm install gatepay-sdk
 ### Create your first link
 
 ```typescript
-import Gatepay from "gatepay-sdk"
+import { Gatepay } from "gatepay-sdk"
 
 // Initialize the client with your API token
 const gatepay = new Gatepay({
@@ -289,7 +289,7 @@ const transactions = await gatepay.account.getAccountTransactions({
 ### Client Initialization
 
 ```typescript
-import Gatepay from "gatepay-sdk"
+import { Gatepay } from "gatepay-sdk"
 
 const gatepay = new Gatepay({
     apiToken: "your-api-token", // Get from https://gatepay.cloud

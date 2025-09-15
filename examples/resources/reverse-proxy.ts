@@ -1,4 +1,4 @@
-import Gatepay from "gatepay-sdk"
+import { Gatepay } from "gatepay-sdk"
 
 /**
  * Example: Create a Gatepay link with reverse proxy resource

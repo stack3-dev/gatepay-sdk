@@ -1,4 +1,4 @@
-import Gatepay from "gatepay-sdk"
+import { Gatepay } from "gatepay-sdk"
 
 /**
  * Example: Create a Gatepay link with no resource
@@ -60,4 +60,4 @@ async function createNoResourceLink() {
 export { createNoResourceLink }
 
 // Uncomment to run the example directly:
-// createNoResourceLink().catch(console.error)
+createNoResourceLink().catch(console.error)

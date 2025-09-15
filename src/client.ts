@@ -253,6 +253,3 @@ export class Gatepay {
         return this.configuration
     }
 }
-
-// Export the main client as default
-export default Gatepay
